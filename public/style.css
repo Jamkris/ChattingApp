@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.title {
+	color: #2c3e50;
+	margin-bottom: 30px;
+	font-weight: 600;
+	letter-spacing: -1px;
+}
+
+.main {
+	background-color: white;
+	border-radius: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	width: 450px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.name {
+	display: flex;
+	align-items: center;
+	background-color: #f8f9fa;
+	padding: 12px 16px;
+	border-bottom: 1px solid #e9ecef;
+}
+
+.name > span {
+	color: #6c757d;
+	margin-right: 12px;
+}
+
+.name-input {
+	flex-grow: 1;
+	border: none;
+	background-color: transparent;
+	font-size: 18px;
+	color: #343a40;
+	font-weight: 500;
+	outline: none;
+}
+
+.message-container {
+	background-color: #ffffff;
+	height: 600px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	scrollbar-width: thin;
+	scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+.message-container::-webkit-scrollbar {
+	width: 8px;
+}
+
+.message-container::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+	background-color: #c1c1c1;
+	border-radius: 4px;
+}
+
+.message-left,
+.message-right {
+	list-style: none;
+	max-width: 80%;
+	margin: 8px 0;
+	padding: 12px 16px;
+	border-radius: 18px;
+	font-size: 16px;
+	position: relative;
+}
+
+.message-left {
+	align-self: flex-start;
+	background-color: #f1f0f0;
+	color: #2c3e50;
+}
+
+.message-right {
+	align-self: flex-end;
+	background-color: #3498db;
+	color: white;
+}
+
+.message-left > p > span,
+.message-right > p > span {
+	display: block;
+	font-size: 11px;
+	margin-top: 6px;
+	opacity: 0.7;
+}
+
+.message-left > p > span {
+	color: #7f8c8d;
+}
+
+.message-right > p > span {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.feedback {
+	text-align: center;
+	font-style: italic;
+	color: #7f8c8d;
+	padding: 10px;
+}
+
+.message-form {
+	display: flex;
+	background-color: #f8f9fa;
+	border-top: 1px solid #e9ecef;
+}
+
+.message-input {
+	flex-grow: 1;
+	padding: 12px 16px;
+	border: none;
+	background-color: transparent;
+	font-size: 16px;
+}
+
+.send-button {
+	background-color: #3498db;
+	color: white;
+	border: none;
+	padding: 0 20px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+	background-color: #2980b9;
+}
+
+.send-button span {
+	margin-left: 8px;
+}
+
+.v-divider {
+	width: 1px;
+	background-color: #e9ecef;
+}
+
+.clients-total {
+	color: #7f8c8d;
+	margin-top: 20px;
+	font-weight: 300;
+}
+
+@media (max-width: 480px) {
+	.main,
+	.message-container,
+	.message-form {
+		width: 100%;
+		max-width: 100%;
+	}
+}
